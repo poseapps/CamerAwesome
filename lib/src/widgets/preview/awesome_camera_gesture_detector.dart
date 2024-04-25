@@ -67,7 +67,7 @@ class AwesomeCameraGestureDetector extends StatefulWidget {
 class _AwesomeCameraGestureDetector
     extends State<AwesomeCameraGestureDetector> {
   double _zoomScale = 0;
-  final double _accuracy = 0.01;
+  final double _accuracy = 0.0025;
   double? _lastScale;
 
   Offset? _tapPosition;
