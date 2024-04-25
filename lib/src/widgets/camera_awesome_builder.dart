@@ -361,11 +361,11 @@ class _CameraWidgetBuilder extends State<CameraAwesomeBuilder>
     super.didUpdateWidget(oldWidget);
   }
 
-  @override
-  void didChangeDependencies() {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    super.didChangeDependencies();
-  }
+  // @override
+  // void didChangeDependencies() {
+  //   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  //   super.didChangeDependencies();
+  // }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
