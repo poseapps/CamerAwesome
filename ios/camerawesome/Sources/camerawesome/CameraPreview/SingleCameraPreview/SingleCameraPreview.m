@@ -519,7 +519,7 @@
 /// Record video into the given path
 - (void)recordVideoAtPath:(NSString *)path completion:(nonnull void (^)(FlutterError * _Nullable))completion {
   if (!_videoController.isRecording) {
-    [_videoController recordVideoAtPath:path captureDevice:_captureDevice orientation:_deviceOrientation audioSetupCallback:^{
+    [_videoController recordVideoAtPath:path captureDevice:_captureDevice orientation:_motionController.deviceOrientation audioSetupCallback:^{
       [self setUpCaptureSessionForAudioError:^(NSError *error) {
         completion([FlutterError errorWithCode:@"VIDEO_ERROR" message:@"error when trying to setup audio" details:[error localizedDescription]]);
       }];
@@ -586,6 +586,7 @@
   }
   
   [_captureSession commitConfiguration];
+  completion(@(YES), nil);
 }
 
 # pragma mark - Audio
