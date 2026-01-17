@@ -132,7 +132,10 @@ class _SensorTypeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = AwesomeThemeProvider.of(context).theme;
+
     return AwesomeOrientedWidget(
+      rotateWithDevice: theme.buttonTheme.rotateWithCamera,
       child: AwesomeBouncingWidget(
         onTap: onTap,
         child: AnimatedContainer(
